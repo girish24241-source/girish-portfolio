@@ -508,3 +508,32 @@ body.light-mode .floating-card {
   .about-photo img { height: 280px; }
   footer { flex-direction: column; text-align: center; }
 }
+/* FIX LIGHT MODE ON ALL SCREEN SIZES */
+
+body.light-mode {
+  background: #f5f7ff !important;
+  color: #172033 !important;
+}
+
+body.light-mode .hero,
+body.light-mode .about,
+body.light-mode .skills,
+body.light-mode .projects,
+body.light-mode .contact {
+  background: #f5f7ff !important;
+  color: #172033 !important;
+}
+
+body.light-mode .section-title,
+body.light-mode .hero h1,
+body.light-mode .hero p {
+  color: #172033 !important;
+}
+
+body.light-mode .skill-card,
+body.light-mode .project-card,
+body.light-mode .info-card {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-color: #dddded !important;
+}
