@@ -120,16 +120,39 @@ if (window.THREE && container) {
 } else {
   console.log("Three.js could not load. Check your internet connection.");
 }
-// DARK / LIGHT MODE SWITCH
+// DARK / LIGHT MODE WITH SAVED PREFERENCE
 const themeToggle = document.getElementById("theme-toggle");
 
+// Load the saved theme
+const savedTheme = localStorage.getItem("portfolio-theme");
+
+if (savedTheme === "light") {
+  document.body.classList.add("light-mode");
+}
+
+// Update button text
+function updateThemeButton() {
+  if (themeToggle) {
+    themeToggle.textContent =
+      document.body.classList.contains("light-mode")
+        ? "🌙 Dark Mode"
+        : "☀️ Light Mode";
+  }
+}
+
+updateThemeButton();
+
+// Switch and save theme
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
     const isLight = document.body.classList.toggle("light-mode");
 
-    themeToggle.textContent = isLight
-      ? "🌙 Dark Mode"
-      : "☀️ Light Mode";
+    localStorage.setItem(
+      "portfolio-theme",
+      isLight ? "light" : "dark"
+    );
+
+    updateThemeButton();
   });
 }
 // Console message
