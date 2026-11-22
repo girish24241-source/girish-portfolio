@@ -455,52 +455,7 @@ footer {
     flex-direction: column;
     text-align: center;
   }
-  /* DARK AND LIGHT MODE */
 
-.theme-toggle {
-  padding: 10px 16px;
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 25px;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  font-size: 13px;
-  transition: 0.3s;
-}
-
-.theme-toggle:hover {
-  transform: scale(1.05);
-}
-
-body.light-mode {
-  background: #f5f7ff;
-  color: #172033;
-}
-
-body.light-mode .navbar {
-  background: rgba(255,255,255,0.92);
-  border-bottom-color: #ddd;
-}
-
-body.light-mode .logo,
-body.light-mode nav a,
-body.light-mode .menu-toggle,
-body.light-mode .secondary-button,
-body.light-mode .contact-links a {
-  color: #172033;
-}
-
-body.light-mode .skill-card,
-body.light-mode .project-card,
-body.light-mode .info-card {
-  background: #ffffff;
-  border-color: #dddded;
-}
-
-body.light-mode .floating-card {
-  background: rgba(255,255,255,0.9);
-  color: #172033;
-}
   nav.open { display: flex; }
   .hero h1 { letter-spacing: -2px; }
   .skill-grid, .project-grid { grid-template-columns: 1fr; }
