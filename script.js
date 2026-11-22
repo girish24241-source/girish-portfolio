@@ -123,3 +123,17 @@ if (window.THREE && container) {
 
 // Console message
 console.log("Girish's 3D Portfolio is running!");
+// DARK / LIGHT MODE SWITCH
+const themeToggle = document.getElementById("theme-toggle");
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+      themeToggle.textContent = "🌙 Dark Mode";
+    } else {
+      themeToggle.textContent = "☀️ Light Mode";
+    }
+  });
+}
